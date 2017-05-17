@@ -34,7 +34,7 @@ public class ReadFile {
 		
         try{
         	//Scanner will read from file
-            inputStream = new Scanner(resourceLoader.getResource("classpath:weather.dat").getFile());
+            inputStream = new Scanner(resourceLoader.getResource("classpath:weather.dat").getInputStream());
             
             //Read header lines
             inputStream.nextLine();
