@@ -67,5 +67,12 @@ Structure
 
 Usage
 
+Open in IDE
+
   To open app on sts(spring tool suite) IDE go to File click import then select an import source choose Existing Maven projects. Then go to the directory of
-  the application and import. Right click on the project and Select maven then click on Maven Install menu to get all dependancies. Finally now right click on the app and choose run as spring boot app.
+  the application and import. Right click on the project and Select Maven then click on Maven Install menu to get all dependancies. Finally now right click on the app and choose run as spring boot app.
+  
+Build and Run App
+
+Open the folder where the app is located and open target folder. Open command line inside the target folder then key in 
+java -jar "weather-Version 1.0.0.jar" in linux or windows
