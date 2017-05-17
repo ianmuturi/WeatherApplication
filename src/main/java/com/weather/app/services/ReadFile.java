@@ -1,9 +1,7 @@
 package com.weather.app.services;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,9 +9,9 @@ import java.util.regex.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 
-import com.weather.app.WeatherAppApplication;
 import com.weather.app.utils.Weather;
 
 
@@ -23,23 +21,20 @@ public class ReadFile {
 	@Autowired
 	MaxSpread maxSpread;
 	
+	@Autowired
+	private ResourceLoader resourceLoader;
+	
 	Weather weather = new Weather();
 	
 	
 	@EventListener(ContextRefreshedEvent.class)
 	public void readWeatherFile() throws IOException 
 	{
-		//Initialize
-		String fileName= "weather.dat";
 		Scanner inputStream;		 
-		URL path = WeatherAppApplication.class.getResource(fileName);
 		
-		//Gets the file with the weather data
-        File file= new File(path.getFile());
-
         try{
         	//Scanner will read from file
-            inputStream = new Scanner(file);
+            inputStream = new Scanner(resourceLoader.getResource("classpath:weather.dat").getInputStream());
             
             //Read header lines
             inputStream.nextLine();
