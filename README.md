@@ -33,7 +33,6 @@ Structure
     com.weather.app
 
       WeatherAppApplication.java
-      Weather.dat
 
     com.weather.app.services
 
@@ -47,7 +46,8 @@ Structure
     src/main/java
 
       File
-      application.properties
+      application.properties      
+      Weather.dat
 
      src/test/java
 
