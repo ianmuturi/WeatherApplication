@@ -11,6 +11,7 @@ Features
 Compatibility
 
   Java 1.70 and above
+  
   Maven 3 or later
 
 Preferred IDE
