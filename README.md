@@ -4,12 +4,15 @@ The application reads a weather.dat file and loads the Minimum Temperature ,Maxi
 Features
 
   Reads minimum temperature and maximum temperature and gets the difference
+  
   Loops through weather array and returns maximum value which is the difference of maximum temperature and minimum temperature.
 
 
 Compatibility
 
-  Java 1.70 and above
+    Java 1.70 and above
+
+    Maven 3 or later
 
 Preferred IDE
 
@@ -22,7 +25,7 @@ Spring Tool Suite(STS) 3.8.4
 
 Walkthrough
 
-  The app is built by java spring boot framework. It has spring boot starter version 2.0.0 it can on java 1.70 and above
+  The app is built by java spring boot framework. It has spring boot starter version 2.0.0 it can run on java 1.70 and above
 
 Structure
  
@@ -33,7 +36,6 @@ Structure
     com.weather.app
 
       WeatherAppApplication.java
-      Weather.dat
 
     com.weather.app.services
 
@@ -47,7 +49,8 @@ Structure
     src/main/java
 
       File
-      application.properties
+      application.properties      
+      Weather.dat
 
      src/test/java
 
@@ -67,5 +70,12 @@ Structure
 
 Usage
 
+Open in IDE
+
   To open app on sts(spring tool suite) IDE go to File click import then select an import source choose Existing Maven projects. Then go to the directory of
-  the application and import. Right click on the project and Select maven then click on Maven Install menu to get all dependancies. Finally now right click on the app and choose run as spring boot app.
+  the application and import. Right click on the project and Select Maven then click on Maven Install menu to get all dependancies. Finally now right click on the app and choose run as spring boot app.
+  
+Run App
+
+Open the folder where the app is located and open target folder. Open command line inside the target folder then key in 
+java -jar "weather-Version 1.0.0.jar" in linux or windows
